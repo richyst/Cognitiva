@@ -1,189 +1,270 @@
-
-  
-
-    <div>
-    <label>¿Cual es tu grado de gusto por la música? (1 siendo nada y 5 siendo mucho)</label>
-    <input type="number" [(ngModel)]="cuest.numMusica1" name="numMusica" min="1" max="5" integer/>
-
-    
-
-    <div>
-    <label>¿Cual es tu genero musical de los siguientes?</label>
-    
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Slow Song"/><label>Slow Song</label>
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Folk"/><label>Folk</label>
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Dance"/><label>Dance</label>
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Country"/><label>Country</label>
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Classical music"/> <label>Classical music</label>
-      <input type="radio" [(ngModel)]="cuest.musica2" (change)="print()" name="preg" value="Musical"/> <label>Musical </label>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <label>¿Cual es tu grado de gusto por la música? (1 siendo nada y 5 siendo mucho)</label>
     </div>
-
-    <label>¿Cual es tu genero musical de los siguientes?</label>
-    <div>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Pop"/> <label>Pop</label>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Rock"/> <label>Rock</label>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Metal or Hardrock"/> <label>Metal or Hardrock</label>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Punk"/> <label>Punk</label>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Hiphop,rap"/><label>Hiphop,rap</label>
-      <input type="radio" [(ngModel)]="cuest.musica3" name="preg2" value="Reggae, Ska"/><label>Reggae, Ska</label>
+    <div class="col-md-2">
+      <input type="number" [(ngModel)]="cuest.numMusica1" name="numMusica" min="1" max="5" integer/>
     </div>
+  </div>
 
-    <label>¿Cual es tu genero musical de los siguientes?</label>
-    <div>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Swing, Jazz"/><label>Swing, Jazz</label>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Rock n roll"/><label>Rock n roll</label>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Alternative"/><label>Alternative</label>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Latino"/><label>Latino</label>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Techno,Trance"/><label>Techno,Trance</label>
-      <input type="radio" [(ngModel)]="cuest.musica4" name="preg3" value="Opera"/><label>Opera</label>
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Cual es tu género musical de los siguientes?</label>
     </div>
-
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg1" [(ngModel)]="cuest.musica2">
+        <mat-radio-button color="primary" value="Slow Song">Slow song </mat-radio-button>
+        <mat-radio-button color="primary" value="Folk">Folk</mat-radio-button>
+        <mat-radio-button color="primary" value="Dance">Dance</mat-radio-button>
+        <mat-radio-button color="primary" value="Country">Country</mat-radio-button>
+        <mat-radio-button color="primary" value="Classical music">Classical Music</mat-radio-button>
+        <mat-radio-button color="primary" value="Musical">Musical</mat-radio-button>
+      </mat-radio-group>
     </div>
+  </div>
 
-<div>
-  <label>¿Cual es tu grado de gusto por las peliculas? (1 siendo nada y 5 siendo mucho)</label>
-  <input type="number" [(ngModel)]="cuest.numPeliculas" name="numPeliculas" min="1" max="5" integer/>
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Cual es tu género musical de los siguientes?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg2" [(ngModel)]="cuest.musica3">
+        <mat-radio-button color="primary" value="Pop">Pop</mat-radio-button>
+        <mat-radio-button color="primary" value="Rock">Rock</mat-radio-button>
+        <mat-radio-button color="primary" value="Metal or Hardrock">Metal or Hardrock</mat-radio-button>
+        <mat-radio-button color="primary" value="Hiphop,rap">Hiphop,rap</mat-radio-button>
+        <mat-radio-button color="primary" value="Punk">Punk</mat-radio-button>
+        <mat-radio-button color="primary" value="Reggae, Ska">Reggae, Ska</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Cual es tu género musical de los siguientes?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg3" [(ngModel)]="cuest.musica4">
+        <mat-radio-button color="primary" value="Swing, Jazz">Swing, Jazz</mat-radio-button>
+        <mat-radio-button color="primary" value="Rock n roll">Rock n roll</mat-radio-button>
+        <mat-radio-button color="primary" value="Alternative">Alternative</mat-radio-button>
+        <mat-radio-button color="primary" value="Latino">Latino</mat-radio-button>
+        <mat-radio-button color="primary" value="Techno,Trance">Techno,Trance</mat-radio-button>
+        <mat-radio-button color="primary" value="Opera">Opera</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-10">
+      <label>¿Cual es tu grado de gusto por las peliculas? (1 siendo nada y 5 siendo mucho)</label>
+    </div>
+    <div class="col-md-2" style="display: inline;">
+      <input type="number" [(ngModel)]="cuest.numPeliculas" name="numPeliculas" min="1" max="5" integer/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Cual es tu género de peliculas favorito de los siguientes?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg6" [(ngModel)]="cuest.peliculas6">
+        <mat-radio-button color="primary" value="Horror">Horror</mat-radio-button>
+        <mat-radio-button color="primary" value="Thriller">Thriller</mat-radio-button>
+        <mat-radio-button color="primary" value="Comedy">Comedy</mat-radio-button>
+        <mat-radio-button color="primary" value="Romantic">Romantic</mat-radio-button>
+        <mat-radio-button color="primary" value="Sci-fi">Sci-fi</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Cual es tu género de peliculas favorito de los siguientes?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg7" [(ngModel)]="cuest.peliculas7">
+        <mat-radio-button color="primary" value="War">War</mat-radio-button>
+        <mat-radio-button color="primary" value="Fantasy,Fairy Tales">Fantasy,Fairy Tales</mat-radio-button>
+        <mat-radio-button color="primary" value="Documentary">Documentary</mat-radio-button>
+        <mat-radio-button color="primary" value="Animated">Animated</mat-radio-button>
+        <mat-radio-button color="primary" value="Western">Western</mat-radio-button>
+        <mat-radio-button color="primary" value="Action">Action</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select name="preg9" [(ngModel)]="cuest.materiaFav8" placeholder="¿Cuál es tu materia escolar favorita?">
+        <mat-option [value]="mat.mat" *ngFor="let mat of materias">
+          {{mat.mat}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select name="preg10" [(ngModel)]="cuest.pasatiempo9" placeholder="¿Cual es tu pasatiempo preferido?">
+        <mat-option [value]="pasatiempo.pas" *ngFor="let pasatiempo of pasatiempos">
+          {{pasatiempo.pas}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select name="preg10" [(ngModel)]="cuest.miedo10" placeholder="¿Cual es tu mayor miedo?">
+        <mat-option [value]="miedo.mie" *ngFor="let miedo of miedos">
+          {{miedo.mie}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Que tan seguido bebes alcohol? </label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg11" [(ngModel)]="cuest.beber11">
+        <mat-radio-button color="primary" value="never">never</mat-radio-button>
+        <mat-radio-button color="primary" value="social drinker">social drinker</mat-radio-button>
+        <mat-radio-button color="primary" value="drink a lot">drink a lot</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Has fumado anteriormente? </label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg12" [(ngModel)]="cuest.fumar12">
+        <mat-radio-button color="primary" value="never smoked">never smoked</mat-radio-button>
+        <mat-radio-button color="primary" value="tried smoking">tried smoking</mat-radio-button>
+        <mat-radio-button color="primary" value="former smoker">former smoker</mat-radio-button>
+        <mat-radio-button color="primary" value="current smoker">current smoker</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Con cuál de las siguientes frases te identificas más?" name="frase13" [(ngModel)]="cuest.frase13">
+        <mat-option [value]="frase.fra" *ngFor="let frase of frases">
+          {{frase.fra}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Con cuál de las siguientes frases te identificas más?" name="frase14" [(ngModel)]="cuest.frase14">
+        <mat-option [value]="frase2.fra2" *ngFor="let frase2 of frases2">
+          {{frase2.fra2}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Con cuál de las siguientes frases te identificas más?" name="frase15" [(ngModel)]="cuest.frase15">
+        <mat-option [value]="frase3.fra3" *ngFor="let frase3 of frases3">
+          {{frase3.fra3}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Con cuál de las siguientes frases te identificas más?" name="frase16" [(ngModel)]="cuest.frase16">
+        <mat-option [value]="frase4.fra4" *ngFor="let frase4 of frases4">
+          {{frase4.fra4}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Que tan puntual eres?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg17" [(ngModel)]="cuest.puntual17">
+        <mat-radio-button color="primary" value="i am always on time">i am always on time</mat-radio-button>
+        <mat-radio-button color="primary" value="i am often early">i am often early</mat-radio-button>
+        <mat-radio-button color="primary" value="i am often running late">i am often running late</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Que tan seguido mientes?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg18" [(ngModel)]="cuest.mientes18">
+        <mat-radio-button color="primary" value="never">never</mat-radio-button>
+        <mat-radio-button color="primary" value="only to avoid hurting someone">only to avoid hurting someone</mat-radio-button>
+        <mat-radio-button color="primary" value="sometimes">sometimes</mat-radio-button>
+        <mat-radio-button color="primary" value="everytime it suit me">everytime it suit me</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Qué es lo más importante para ti de lo siguiente?" name="importante" [(ngModel)]="cuest.importante19">
+        <mat-option [value]="importante.imp" *ngFor="let importante of importantes">
+          {{importante.imp}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Qué es lo más importante para ti de lo siguiente?" name="importante2" [(ngModel)]="cuest.importante20">
+        <mat-option [value]="importante2.imp" *ngFor="let importante2 of importantes2">
+          {{importante2.imp}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <mat-form-field style="width: 100%;">
+      <mat-select placeholder="¿Qué es lo más importante para ti de lo siguiente?" name="importante3" [(ngModel)]="cuest.importante21">
+        <mat-option [value]="importante3.imp" *ngFor="let importante3 of importantes3">
+          {{importante3.imp}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label>¿Que tan seguido usas internet?</label>
+    </div>
+    <div class="col-md-6" style="display: inline;">
+      <mat-radio-group name="preg22" [(ngModel)]="cuest.internet22">
+        <mat-radio-button color="primary" value="less than an hour a day">less than an hour a day</mat-radio-button>
+        <mat-radio-button color="primary" value="few hours a day">few hours a day</mat-radio-button>
+        <mat-radio-button color="primary" value="most of the day">most of the day</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </div>
+  <div class="boton">
+    <button mat-raised-button (click)="send()" color="primary">Enviar</button>
+  </div>
 </div>
-
-  <label>¿Cual es tu genero de peliculas favorito de los siguientes?</label>
-  <div>
-    <input type="radio" [(ngModel)]="cuest.peliculas6" name="preg6" value="Horror"/><label>Horror</label>
-    <input type="radio" [(ngModel)]="cuest.peliculas6" name="preg6" value="Thriller"/><label>Thriller</label>
-    <input type="radio" [(ngModel)]="cuest.peliculas6" name="preg6" value="Comedy"/><label>Comedy</label>
-    <input type="radio" [(ngModel)]="cuest.peliculas6" name="preg6" value="Romantic"/><label>Romantic</label>
-    <input type="radio" [(ngModel)]="cuest.peliculas6" name="preg6" value="Sci-fi"/><label>Sci-fi</label>   
-  </div>
-
-  <label>¿Cual es tu genero de peliculas favorito de los siguientes?</label>
-<div>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="War" /><label>War</label>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="Fantasy,Fairy Tales" /><label>Fantasy,Fairy Tales</label>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="Documentary" /><label>Documentary</label>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="Animated" /><label>Animated</label>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="Western" /><label>Western</label>
-  <input type="radio" [(ngModel)]="cuest.peliculas7" name="preg7" value="Action" /><label>Action</label>
-</div>
-
-<div>
-  <label>¿Cuál es tu materia escolar favorita?</label>
-  <select name="claseEscuela"  [(ngModel)]="cuest.materiaFav8">
-    <option [value]="mat.mat" *ngFor="let mat of materias">{{mat.mat}}</option>
-  </select>
-</div>
-
-<div>
-  <label>¿Cual es tu pasatiempo preferido?</label>
-  <select name="pasatiempo"  [(ngModel)]="cuest.pasatiempo9" >
-    <option [value]="pasatiempo.pas" *ngFor="let pasatiempo of pasatiempos">{{pasatiempo.pas}}</option>
-  </select>
-</div>
-
-<div>
-  <label>¿Cual es tu mayor miedo?</label>
-  <select name="miedo" [(ngModel)]="cuest.miedo10" >
-    <option [value]="miedo.mie" *ngFor="let miedo of miedos">{{miedo.mie}}</option>
-  </select>
-</div>
-
-<div>
-  <label>¿Que tan seguido bebes alcohol? </label>
-  <input type="radio" [(ngModel)]="cuest.beber11" name="preg11" value="never" /><label>Never</label>
-  <input type="radio" [(ngModel)]="cuest.beber11" name="preg11" value="socias drinker" /><label>Social drinker</label>
-  <input type="radio" [(ngModel)]="cuest.beber11" name="preg11" value="drink a lot" /><label>drink a lot</label>
-</div>
-
-<div>
-  <label>¿Has fumado anteriormente? </label>
-    <input type="radio" [(ngModel)]="cuest.fumar12" name="preg12" value="never smoked" /><label>never smoked</label>
-    <input type="radio" [(ngModel)]="cuest.fumar12" name="preg12" value="tried smoking" /><label>tried smoking</label>
-    <input type="radio" [(ngModel)]="cuest.fumar12" name="preg12" value="former smoker" /><label>former smoker</label>
-    <input type="radio" [(ngModel)]="cuest.fumar12" name="preg12" value="current smoker" /><label>current smoker</label>
-  </div>
-
-  <div>
-    <label>¿Con cuál de las siguientes frases te identificas más?</label>
-    <select name="frase" [(ngModel)]="cuest.frase13">
-      <option [value]="frase.fra" *ngFor="let frase of frases">{{frase.fra}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Con cuál de las siguientes frases te identificas más?</label>
-    <select name="frase2" [(ngModel)]="cuest.frase14">
-      <option [value]="frase2.fra2" *ngFor="let frase2 of frases2">{{frase2.fra2}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Con cuál de las siguientes frases te identificas más?</label>
-    <select name="frase3" [(ngModel)]="cuest.frase15">
-      <option [value]="frase3.fra3" *ngFor="let frase3 of frases3">{{frase3.fra3}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Con cuál de las siguientes frases te identificas más?</label>
-    <select name="frase4" [(ngModel)]="cuest.frase16">
-      <option [value]="frase4.fra4" *ngFor="let frase4 of frases4">{{frase4.fra4}}</option>
-    </select>
-  </div>
-      
-
-  <div>
-    <label>¿Que tan puntual eres? </label>
-    <input type="radio" [(ngModel)]="cuest.puntual17" name="preg14" value="i am always on time" />
-    <label>i am always on time</label>
-    <input type="radio" [(ngModel)]="cuest.puntual17" name="preg14" value="i am often early" />
-    <label>i am often early</label>
-    <input type="radio" [(ngModel)]="cuest.puntual17" name="preg14" value="i am often running late" />
-    <label>i am often running late</label>
-  </div>
-
-
-  <div>
-    <label>¿Que tan seguido mientes? </label>
-    <input type="radio" [(ngModel)]="cuest.mientes18" name="preg15" value="never" />
-    <label>never</label>
-    <input type="radio" [(ngModel)]="cuest.mientes18" name="preg15" value="only to avoid hurting someone" />
-    <label>only to avoid hurting someone</label>
-    <input type="radio" [(ngModel)]="cuest.mientes18" name="preg15" value="sometimes" />
-    <label>sometimes</label>
-    <input type="radio" [(ngModel)]="cuest.mientes18" name="preg15" value="everytime it suits me" />
-    <label>everytime it suits me</label>
-  </div>
-
-  <div>
-    <label>¿Qué es lo más importante para ti de lo siguiente?</label>
-    <select name="importante" [(ngModel)]="cuest.importante19">
-      <option [value]="importante.imp" *ngFor="let importante of importantes">{{importante.imp}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Qué es lo más importante para ti de lo siguiente?</label>
-    <select name="importante2" [(ngModel)]="cuest.importante20">
-      <option [value]="importante2.imp" *ngFor="let importante2 of importantes2">{{importante2.imp}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Qué es lo más importante para ti de lo siguiente?</label>
-    <select name="importante3" [(ngModel)]="cuest.importante21">
-      <option [value]="importante3.imp" *ngFor="let importante3 of importantes2">{{importante3.imp}}</option>
-    </select>
-  </div>
-
-  <div>
-    <label>¿Qué tan seguido usas internet? </label>
-    <input type="radio" [(ngModel)]="cuest.internet22" name="preg22" value="less than an hour a day" />
-    <label>less than an hour a day</label>
-    <input type="radio" [(ngModel)]="cuest.internet22" name="preg22" value="few hours a day" />
-    <label>few hours a day</label>
-    <input type="radio" [(ngModel)]="cuest.internet22" name="preg22" value="most of the day" />
-    <label>most of the day</label>
-  </div>
-  
-
-
-

@@ -1,0 +1,14 @@
+.row {
+  border: 1px solid black;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 5px;
+}
+.container{
+  border: 1px dotted #aaa;
+  border-radius: 5px;
+}
+.boton{
+  margin-left: 950px;
+  margin-bottom: 25px;
+}

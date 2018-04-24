@@ -5,10 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule, MatRadioModule, MatSelectModule, MatInputModule, MatFormFieldModule } from '@angular/material';
-
+import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import {CuestionarioComponent} from './cuestionario/cuestionario.component';
 import { GraficasComponent } from './graficas/graficas.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { GraficasComponent } from './graficas/graficas.component';
     AppComponent,
     CuestionarioComponent,
     GraficasComponent,
-    CuestionarioComponent
+    CuestionarioComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -26,11 +28,12 @@ import { GraficasComponent } from './graficas/graficas.component';
     MatInputModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    routing
 
 
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

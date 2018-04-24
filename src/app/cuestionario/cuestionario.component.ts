@@ -43,28 +43,28 @@ export class CuestionarioComponent implements OnInit {
 
 
   cuest = {
-    numMusica1: 1,
-    musica2: 'Slow Song',
-    musica3: 'Pop',
-    musica4: 'Swing, Jazz',
-    numPeliculas: 1,
-    peliculas6: 'Horror',
-    peliculas7: 'War',
+    numMusica1: '',
+    musica2: '',
+    musica3: '',
+    musica4: '',
+    numPeliculas: '',
+    peliculas6: '',
+    peliculas7: '',
     materiaFav8: [],
     pasatiempo9: [],
     miedo10: [],
-    beber11: 'never',
-    fumar12: 'never smoked',
+    beber11: '',
+    fumar12: '',
     frase13: [],
     frase14: [],
     frase15: [],
     frase16: [],
-    puntual17: 'i am always on time',
-    mientes18: 'never',
+    puntual17: '',
+    mientes18: '',
     importante19: [],
     importante20: [],
     importante21: [],
-    internet22: 'less than an hour a day'
+    internet22: ''
   };
 
   constructor() { }

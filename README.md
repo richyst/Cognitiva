@@ -1,27 +1,30 @@
-# Cognitive
+#  Proyecto Cognitiva (Frontend)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+Este proyecto fue desarrollado con [Angular CLI](https://github.com/angular/angular-cli) versión 1.7.4.
 
-## Development server
+## Dependencias
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Este es un proyecto de que usa Node por lo que sigue el procedimiento estandar para instalado de dependencias pero se requiere de la dependencia global [Angular CLI](https://github.com/angular/angular-cli) para poder hacer uso del comando ng en la terminal.
 
-## Code scaffolding
+Ya que se cuente con el CLI de Angular entonces se puede hacer npm install para que se instalen todas las dependencias locales del proyecto.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Servidor de desarrollo 
 
-## Build
+Usar el comando `ng serve` para poder correr el servidor de desarrollo. Se podrá visualizar en la ruta `http://localhost:4200/`. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Documentación
 
-## Running end-to-end tests
+Esta aplicación es una Single Page Application que hace uso de un router para que parezca tener multiples páginas y navegación similar a la de los sitios tradicionales.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Solo se cuenta con dos rutas:
 
-## Further help
+* /Home
+* /Cuestionario
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+En Home se tiene el landing del sitio unicamente mientras que el cuestionario tiene el formulario que se va a enviar al backend para obtener las variables predichas.
+
+Se tiene un servicio llamado `cuestionario.service.ts` que sirve para la comunicación con el backend por medio del protocolo HTTP, se hace una petición del tipo POST.
+
+Se puede leer todo acerca del API en [Cognitiva-Backend](https://github.com/richyst/Cognitiva-Backend) 

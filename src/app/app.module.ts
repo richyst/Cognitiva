@@ -5,6 +5,7 @@ import { HttpModule, Http } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { MatButtonModule, MatRadioModule, MatSelectModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
@@ -31,9 +32,8 @@ import { HomeComponent } from './home/home.component';
     MatFormFieldModule,
     MatButtonModule,
     routing,
-    HttpModule
-
-
+    HttpModule,
+    NgxChartsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

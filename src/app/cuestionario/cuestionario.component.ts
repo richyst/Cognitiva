@@ -47,6 +47,7 @@ export class CuestionarioComponent implements OnInit {
   importantes3 = [{ imp: 'Happiness in life' }, { imp: 'Energy levels' }, { imp: 'Small or big dogs' }, { imp: 'Personality' },
     { imp: 'Finding lost valuables' }, { imp: 'Getting up' }, { imp: 'Interests or hobbies' }, { imp: 'Parents advice' }, { imp: 'Questionnaires or polls' }];
 
+  info: any;
   cuest = {
     numMusica1: '',
     musica2: '',
@@ -71,7 +72,37 @@ export class CuestionarioComponent implements OnInit {
     importante21: [],
     internet22: ''
   };
-
+  res = false;
+  informacion = [
+    {
+      'name': 'Finanzas',
+      'value': 0
+    },
+    {
+      'name': 'Ropa de Marca',
+      'value': 0
+    },
+    {
+      'name': 'Gasto en Entretenimiento',
+      'value': 0
+    },
+    {
+      'name': 'Centros Comerciales',
+      'value': 0
+    },
+    {
+      'name': 'Gasto en Gadgets',
+      'value': 0
+    },
+    {
+      'name': 'Gasto en Comer Saludable',
+      'value': 0
+    },
+    {
+      'name': 'Gasto en Apariencia',
+      'value': 0
+    }
+  ];
   constructor( private cuestionarioService: CuestionarioService) { }
 
   print() {
@@ -86,11 +117,46 @@ export class CuestionarioComponent implements OnInit {
     this.cuestionarioService.enviar(form.value).subscribe(
       data => {
         console.log(data);
+        this.cleanData(data);
+        this.res = true;
+        this.info = data;
       },
       error => {
         console.log(error);
       }
     );
+  }
+  cleanData(arr: any) {
+    this.informacion = [
+      {
+        'name': 'Finanzas',
+        'value': arr.Finances
+      },
+      {
+        'name': 'Ropa de Marca',
+        'value': arr['Branded clothing']
+      },
+      {
+        'name': 'Gasto en Entretenimiento',
+        'value': arr['Entertainment spending']
+      },
+      {
+        'name': 'Centros Comerciales',
+        'value': arr['Shopping centres']
+      },
+      {
+        'name': 'Gasto en Gadgets',
+        'value': arr['Spending on gadgets']
+      },
+      {
+        'name': 'Gasto en Comer Saludable',
+        'value': arr['Spending on healthy eating']
+      },
+      {
+        'name': 'Gasto en Apariencia',
+        'value': arr['Spending on looks']
+      }
+    ];
   }
 
 }

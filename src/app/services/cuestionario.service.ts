@@ -6,7 +6,7 @@ import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class CuestionarioService {
-  url = 'http://localhost:5000/';
+  url = 'http://ec2-18-217-192-105.us-east-2.compute.amazonaws.com:5000/';
   constructor(private _http: Http) { }
 
   enviar(body) {
